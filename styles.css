@@ -137,7 +137,6 @@ nav ul li a {
 }
 
 /* Hero Section */
-#hero-index,
 #hero-about,
 #hero-contact {
     background-size: cover;
@@ -151,8 +150,36 @@ nav ul li a {
 }
 
 #hero-index {
-    background: url('16.jpg') no-repeat center center;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 150px;
+    padding-left: 10px;
+    min-height: 60vh;
+    background-image: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 100%),
+        url('boiler2.png'), 
+        url('indexmain.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center top, center bottom;
+    background-size: cover, cover, cover;
 }
+
+.NormalCharacterStyle {
+    font-family: Cairo;
+    font-weight: bold;
+    font-size: 46px;
+    letter-spacing: 13.11px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.st1 {
+    background: linear-gradient(90deg, rgba(0, 154, 166, 1) 0%, rgba(8, 70, 151, 1) 100%);
+}
+
+
 
 #hero-about {
     background: url('40.jpg') no-repeat center center;
