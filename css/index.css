@@ -1,0 +1,578 @@
+/* Hero Section */
+#hero-about,
+#hero-contact {
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 150px;
+    padding-left: 10px;
+    min-height: 60vh;
+}
+
+#hero-index {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 150px;
+    padding-left: 10px;
+    min-height: 60vh;
+    background-image: 
+
+    url('123.png'), 
+    url('blueImg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center top, center bottom;
+    background-size: cover, cover, cover;
+
+	
+
+}
+
+#hero-about {
+    background: url('40.jpg') no-repeat center center;
+}
+
+#hero-contact {
+    background: url('52.jpg') no-repeat center center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    height: 40vh; /* Adjust the height to center it within the section */
+    margin: 0 auto; /* Center the container */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+
+
+
+.main-title {
+    font-size: 2.5rem;
+    letter-spacing: 0.7rem;
+  
+}
+
+
+
+
+/* Future Healthcare and Our Place Sections */
+
+#future-healthcare, #our-place {
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+#future-healthcare 
+
+    {
+        background-image : url(123.png);
+        background-repeat : no-repeat;
+        opacity : 1;
+        text-align: center;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        color: black;
+        z-index: 1;
+        filter: alpha(opacity=90) progid:DXImageTransform.Microsoft.Alpha(opacity=40) ;
+    }
+.future-healthcare img
+{
+    transform: scaleX(-1);
+}
+    
+#future-healthcare .container, #our-place .container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+}
+
+#future-healthcare .title, #future-healthcare .description,
+#our-place .description, #our-place .title {
+    flex: 1;
+    padding: 15px;
+}
+#future-healthcare .title{
+    text-align: right;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+#our-place .title {
+    text-align: left;
+    margin-left: 150px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+#future-healthcare .description{
+    text-align: left;
+    margin-top: 50px;
+}
+
+#our-place .description {
+    text-align: right;
+    color: #333;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+.drivecolor{
+    color: #220d68; 
+    font-size: 2.4rem;  
+    line-height: 1.2;
+   }
+   
+.ourcolor{
+    color: #1fb9ec; 
+    font-size: 2.4rem;  
+    line-height: 1.2;
+}
+.sizee{
+    font-size: 1.2rem;
+}
+
+section {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+/* Rows and Columns */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.column {
+    flex: 1;
+    max-width: 23%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    height: 300px;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius : 15px 15px 15px 15px;
+	-moz-border-radius : 15px 15px 15px 15px;
+	-webkit-border-radius : 15px 15px 15px 15px;
+
+}
+
+.subsidiaries .container, .brands .container, .partner .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.subsidiaries .description-box {
+    color: #fff;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background : #007196;
+	background : rgba(0, 113, 150, 1);
+	border-radius : 15px 15px 0px 0px;
+	-moz-border-radius : 15px 15px 0px 0px;
+	-webkit-border-radius : 15px 15px 0px 0px;
+}
+
+.brands .description-box {
+    color:#f2f2f2;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background : #2E3192;
+	background : rgba(46, 49, 146, 1);
+	border-radius : 15px 15px 0px 0px;
+	-moz-border-radius : 15px 15px 0px 0px;
+	-webkit-border-radius : 15px 15px 0px 0px;
+}
+
+.partner .description-box{
+    color: #fff;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background : #0071BC;
+	background : rgba(0, 113, 188, 1);
+	border-radius : 15px 15px 0px 0px;
+	-moz-border-radius : 15px 15px 0px 0px;
+	-webkit-border-radius : 15px 15px 0px 0px;
+}
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background: #f2f2f2;
+    border-radius : 0px 0px 15px 15px;
+	-moz-border-radius : 0px 0px 15px 15px;
+	-webkit-border-radius : 0px 0px 15px 15px;
+}
+
+
+.logo-box img {
+    max-width: 250px;
+    height: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    padding: 20px;
+    
+    width: 90%;
+    border-radius : 0px 0px 15px 15px;
+	-moz-border-radius : 0px 0px 15px 15px;
+	-webkit-border-radius : 0px 0px 15px 15px;
+}
+
+/* Technology and Talent Section */
+#technology-talent {
+    background-color: #000a3d;
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#technology-talent h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.tech-box {
+    background : #FFFFFF;
+	background : rgba(255, 255, 255, 1);
+	border-radius : 39px;
+	-moz-border-radius : 39px;
+	-webkit-border-radius : 39px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    height: 80px;
+    width: 250px;
+}
+
+.tech-box img {
+    width: 100px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    background: #fff;
+    padding: 10px;
+    
+}
+
+.talent-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #000a3d;
+    border: none;
+    box-shadow: none;
+}
+
+.talent-box .number {
+    margin-right: 20px;
+    font-weight : bold;
+	font-size : 80px;
+	line-height : 61px;
+	color : #009AA6;
+	color : rgb(0, 154, 166);
+}
+
+.talent-box .description {
+    font-size : 15px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+
+/* In the News Section */
+#in-the-news {
+    padding: 50px 20px;
+    background: #f0f0f0;
+}
+
+#in-the-news .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#in-the-news h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.news-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background: #fff;
+    width: 48%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Existing Styles (No changes needed for larger screens) */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header, .footer-container, .hero-content, nav ul, .row, .tech-box, .talent-box, .news-items, .news-item, .footer-column, #contact-form-info .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .box, .subsidiaries .container, .brands .container, .partner .container, #future-healthcare .container, #our-place .container, .news-item {
+        width: 100%;
+    }
+
+    .hero-content h1, .main-title {
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+
+    /* Center the content of the future-healthcare and our-place sections */
+    #future-healthcare .container, #our-place .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #future-healthcare .title, #our-place .title,
+    #future-healthcare .description, #our-place .description {
+        text-align: center;
+        margin: 20px 0; /* Add some spacing between elements */
+    }
+
+    /* Adjust layout for the 'our-place' section */
+    #our-place .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    #our-place .title {
+        order: 1; /* Place title first */
+        margin-bottom: 10px; /* Add space below the title */
+    }
+
+    #our-place .description {
+        order: 2; /* Place description below the title */
+        margin-top: 10px; /* Add space above the description */
+    }
+
+    /* Fix uneven boxes for subsidiaries, brands, and partner sections */
+    .subsidiaries .box, .brands .box, .partner .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 300px;
+        height: 350px; /* Set a fixed height for consistency */
+        margin: 10px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #ffffff; /* Optional: Add a background color for clarity */
+    }
+
+    .subsidiaries .description-box, .brands .description-box, .partner .description-box {
+        width: 100%;
+        padding: 10px;
+        flex: 1; /* Allow this section to grow and fill space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .subsidiaries .logo-box, .brands .logo-box, .partner .logo-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0; /* Prevent the logo box from shrinking */
+        padding: 10px;
+    }
+
+    .subsidiaries .logo-box img, .brands .logo-box img, .partner .logo-box img {
+        max-width: 100%;
+        max-height: 100%; /* Ensure the image doesn't overflow */
+        object-fit: contain;
+    }
+
+    /* Adjust 'technology-talent' section for smaller screens */
+    #technology-talent .row {
+        display: flex;
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center boxes horizontally */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tech-box {
+        width: 90%; /* Ensure boxes do not exceed a set width */
+        max-width: 300px; /* Optional: set a maximum width */
+        margin: 10px 0; /* Center each box and add margin between them */
+    }
+
+    .talent-box {
+        width: 90%; /* Ensure boxes do not exceed a set width */
+        max-width: 300px; /* Optional: set a maximum width */
+        margin: 10px 0; /* Center each box and add margin between them */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        font-size: 24px;
+    }
+
+    .column {
+        max-width: 100%;
+    }
+
+    .footer-container, .footer-column {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .tech-box, .talent-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0; /* Adjust to have a single column with consistent spacing */
+    }
+
+    .news-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-item {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ensure even boxes for smaller screens */
+    .subsidiaries .box, .brands .box, .partner .box {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+        height: auto; /* Adjust for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+        letter-spacing: 3px;
+    }
+
+    .hero-content h1 {
+        font-size: 20px;
+    }
+
+    .news-item, .box, .tech-box, .talent-box {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0; /* Ensure consistent spacing for all boxes */
+    }
+
+    /* Ensure even boxes for smallest screens */
+    .subsidiaries .box, .brands .box, .partner .box {
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+    }
+}
+
+

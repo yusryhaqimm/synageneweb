@@ -1,0 +1,287 @@
+/* General Styles */
+  body {
+    
+    font-family: 'Cairo';
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #FFFFFF; /* Light grey background for better visibility */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px; */
+    color: #fff;
+    font-family : 'Cairo';
+	font-weight : bold;
+	font-size : 25px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+    
+}
+.logo-container{
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.logo2{
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+
+/* Navigation Styles */
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin-right: 100px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Hamburger Menu for Mobile */
+.nav-toggle {
+    display: none; /* Hide checkbox */
+}
+
+.nav-toggle-label {
+    display: none; /* Hide label by default */
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    transition: 0.3s ease;
+}
+
+.nav-toggle-label span::before {
+    content: '';
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    content: '';
+    top: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block; /* Show the hamburger icon */
+    }
+
+    nav {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul {
+        width: 100%; /* Full width of the nav container */
+    }
+
+    nav ul li {
+        text-align: right; /* Align text to the right */
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        display: block; /* Make links fill the li */
+    }
+
+    .nav-toggle:checked + label + nav {
+        display: flex; /* Display nav when toggle is checked */
+    }
+
+    .logo-placeholder {
+        order: 1; /* Keep logo on the left */
+        margin-right: auto; /* Ensures the logo stays on the left */
+    }
+
+    .nav-toggle-label {
+        order: 2; /* Ensures the hamburger icon is on the right */
+    }
+
+    nav {
+        order: 3;
+        width: 100%; /* Full width nav */
+    }
+}
+
+
+
+/* Hero Section */
+#hero-about,
+#hero-contact {
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 150px;
+    padding-left: 10px;
+    min-height: 60vh;
+}
+
+#hero-index {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 150px;
+    padding-left: 10px;
+    min-height: 60vh;
+    background-image: 
+
+    url('123.png'), 
+    url('blueImg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center top, center bottom;
+    background-size: cover, cover, cover;
+
+	
+
+}
+
+#hero-about {
+    background: url('40.jpg') no-repeat center center;
+}
+
+#hero-contact {
+    background: url('52.jpg') no-repeat center center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    height: 40vh; /* Adjust the height to center it within the section */
+    margin: 0 auto; /* Center the container */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+
+
+
+.main-title {
+    font-size: 3rem;
+    letter-spacing: 10px;
+  
+}
+
+
+
+
+
+
+
+/* Footer Styles */
+#site-footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 0;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 5px 0;
+}
+
+.logo-column {
+    flex: 0 1 auto; /* Allow the logo to maintain its size without stretching */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Left-align the content */
+}
+
+.contact-info div, .contact-methods {
+    text-align: left; /* Left-align text for the address and contact methods */
+}
+
+.contact-methods {
+    display: flex; /* Display both links in a single row */
+    justify-content: start; /* Align the items to the start */
+    gap: 20px; /* Space between call and email links */
+}
+
+.contact-methods a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.contact-methods img {
+    width: 24px; /* Smaller icon size */
+    height: 24px;
+    margin-right: 10px;
+}
