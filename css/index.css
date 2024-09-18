@@ -166,19 +166,6 @@ nav ul li a {
 }
 
 
-/* Hero Section */
-#hero-about,
-#hero-contact {
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 150px;
-    padding-left: 10px;
-    min-height: 60vh;
-}
-
 /* Hero Section with Parallax Effect */
 #hero-index {
     color: #fff;
@@ -188,19 +175,13 @@ nav ul li a {
     padding-bottom: 150px;
     padding-left: 10px;
     min-height: 60vh;
-    background-image: url('123.png'), url('blueImg.png');
+    background-image: url('boiler2.png'), url('blueImg.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center, center top, center bottom;
     background-size: cover, cover, cover;
     background-attachment: fixed; /* This creates the parallax effect */
 }
-#hero-about {
-    background: url('40.jpg') no-repeat center center;
-}
 
-#hero-contact {
-    background: url('52.jpg') no-repeat center center;
-}
 
 .hero-content {
     display: flex;
@@ -255,7 +236,7 @@ nav ul li a {
 #future-healthcare 
 
     {
-        background-image : url(123.png);
+        /*   */
         background-repeat : no-repeat;
         opacity : 1;
         text-align: center;
@@ -650,10 +631,9 @@ p {
 /* Responsive Styles */
 @media (max-width: 1024px) {
     header, .footer-container, .hero-content, nav ul, .row, .tech-box, .talent-box, .news-items, .news-item, .footer-column, #contact-form-info .container {
-        flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 100%;
+        width: 97%;
     }
 
     nav ul li {
@@ -672,9 +652,9 @@ p {
     /* Center the content of the future-healthcare and our-place sections */
     #future-healthcare .container, #our-place .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
         text-align: center;
         margin: 0 auto;
     }
@@ -686,58 +666,75 @@ p {
     }
 
     /* Adjust layout for the 'our-place' section */
-    #our-place .container {
+    #our-place .container, #future-healthcare .container {
         flex-direction: column; /* Stack elements vertically */
         align-items: center; /* Center elements horizontally */
+        justify-content: center; /* Center content vertically */
     }
 
-    #our-place .title {
+    #our-place .title, #future-healthcare .title {
         order: 1; /* Place title first */
         margin-bottom: 10px; /* Add space below the title */
     }
 
-    #our-place .description {
+    #our-place .description, #future-healthcare .description {
         order: 2; /* Place description below the title */
         margin-top: 10px; /* Add space above the description */
     }
 
-    /* Fix uneven boxes for subsidiaries, brands, and partner sections */
+    /* Ensure even boxes for subsidiaries, brands, and partner sections */
     .subsidiaries .box, .brands .box, .partner .box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 100%;
         max-width: 300px;
-        height: 350px; /* Set a fixed height for consistency */
+        height: 400px; /* Set a fixed height for all boxes */
         margin: 10px auto;
-        padding: 20px;
+        padding: 0; /* Remove extra padding to fit content */
         box-sizing: border-box;
         background-color: #ffffff; /* Optional: Add a background color for clarity */
     }
 
     .subsidiaries .description-box, .brands .description-box, .partner .description-box {
         width: 100%;
+        height: 50%; /* Occupy half of the parent box */
         padding: 10px;
-        flex: 1; /* Allow this section to grow and fill space */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        background-color: #007196; /* Original color for Subsidiaries */
+        color: #fff; /* Text color */
+        border-radius: 15px 15px 0 0; /* Rounded top corners */
+    }
+
+    .brands .description-box {
+        background-color: #2E3192; /* Original color for Brands */
+        color: #f2f2f2; /* Text color */
+    }
+
+    .partner .description-box {
+        background-color: #0071BC; /* Original color for Partner */
+        color: #fff; /* Text color */
     }
 
     .subsidiaries .logo-box, .brands .logo-box, .partner .logo-box {
         width: 100%;
+        height: 50%; /* Occupy half of the parent box */
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0; /* Prevent the logo box from shrinking */
+        flex-shrink: 0; /* Prevent shrinking */
         padding: 10px;
+        background-color: #f2f2f2; /* Background color for logo box */
+        border-radius: 0 0 15px 15px; /* Rounded bottom corners */
     }
 
     .subsidiaries .logo-box img, .brands .logo-box img, .partner .logo-box img {
         max-width: 100%;
-        max-height: 100%; /* Ensure the image doesn't overflow */
+        max-height: 100%; /* Ensure images fit within the logo box */
         object-fit: contain;
     }
 
@@ -751,14 +748,14 @@ p {
     }
 
     .tech-box {
-        width: 90%; /* Ensure boxes do not exceed a set width */
-        max-width: 300px; /* Optional: set a maximum width */
+        width: 100%;
+        max-width: 300px;
         margin: 10px 0; /* Center each box and add margin between them */
     }
 
     .talent-box {
-        width: 90%; /* Ensure boxes do not exceed a set width */
-        max-width: 300px; /* Optional: set a maximum width */
+        width: 100%;
+        max-width: 300px;
         margin: 10px 0; /* Center each box and add margin between them */
         display: flex;
         flex-direction: column;
@@ -767,6 +764,119 @@ p {
         padding: 20px;
     }
 }
+
+@media (max-width: 995px) {
+    /* General Layout Adjustments */
+    header, .footer-container, .hero-content, nav ul, .row, .tech-box, .talent-box, .news-items, .news-item, .footer-column, #contact-form-info .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center;
+        width: 100%; /* Ensure full width usage */
+    }
+
+    /* Adjust Navbar and Hero Content */
+    nav ul li {
+        margin-bottom: 10px; /* Space out nav items */
+    }
+
+    .hero-content h1, .main-title {
+        font-size: 26px; /* Adjust font size for hero title */
+        letter-spacing: 4px; /* Slightly decrease letter spacing */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    /* Center Content for Future Healthcare and Our Place Sections */
+    #future-healthcare .container, #our-place .container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
+        text-align: center;
+        margin: 0 auto; /* Center within parent */
+    }
+
+    #future-healthcare .title, #our-place .title,
+    #future-healthcare .description, #our-place .description {
+        text-align: center;
+        margin: 15px 0; /* Adjust margins for spacing */
+    }
+
+    /* Adjust Box Layout for Subsidiaries, Brands, and Partners */
+    .subsidiaries .box, .brands .box, .partner .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 280px; /* Adjust max width to fit within 995px */
+        height: 380px; /* Slightly reduce height for better fit */
+        margin: 10px auto;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #ffffff;
+    }
+
+    .subsidiaries .description-box, .brands .description-box, .partner .description-box {
+        width: 100%;
+        height: 50%;
+        padding: 8px; /* Slightly reduce padding for smaller screens */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .subsidiaries .logo-box, .brands .logo-box, .partner .logo-box {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px; /* Consistent padding with description box */
+        background-color: #f2f2f2;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .subsidiaries .logo-box img, .brands .logo-box img, .partner .logo-box img {
+        max-width: 90%; /* Slightly reduce max width for images */
+        max-height: 90%;
+        object-fit: contain;
+    }
+
+    /* Adjust Technology-Talent Section */
+    #technology-talent .row {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tech-box, .talent-box {
+        width: 100%;
+        max-width: 280px; /* Adjust max width for smaller screens */
+        margin: 10px 0; /* Center each box and add margin between them */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px; /* Adjust padding */
+    }
+
+    /* Adjust Footer for Smaller Screens */
+    .footer-container, .footer-column {
+        flex-direction: column; /* Stack footer elements vertically */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Add margin between footer columns */
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .hero-content {
@@ -778,13 +888,19 @@ p {
     }
 
     .hero-content h1, .main-title {
-    font-size: 2.5rem; /* Increased font size for smaller screens */
-    letter-spacing: 1px; /* Adjust spacing for better readability */
-    white-space: normal; /* Allows text to break into multiple lines */
-    text-align: center; /* Center-align the text */
-    line-height: 1.2; /* Adjust line height for better spacing */
+        font-size: 2.5rem; /* Increased font size for smaller screens */
+        letter-spacing: 1px; /* Adjust spacing for better readability */
+        white-space: normal; /* Allows text to break into multiple lines */
+        text-align: center; /* Center-align the text */
+        line-height: 1.2; /* Adjust line height for better spacing */
     }
     
+    header, .footer-container, .hero-content, nav ul, .row, .tech-box, .talent-box, .news-items, .news-item, .footer-column, #contact-form-info .container {
+        flex-direction: column; /* Add flex-direction: column; here */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
 
     .column {
         max-width: 100%;
@@ -818,7 +934,7 @@ p {
         width: 100%;
         max-width: 300px;
         margin: 20px auto;
-        height: auto; /* Adjust for small screens */
+        height: 400px; /* Fixed height for consistency */
     }
 }
 
@@ -827,7 +943,6 @@ p {
         font-size: 1.8rem; /* Smaller font size for smaller screens */
         letter-spacing: 3px;
     }
-
 
     .news-item, .box, .tech-box, .talent-box {
         width: 100%;

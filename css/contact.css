@@ -1,43 +1,267 @@
+/* General Styles */
+body {
+    
+    font-family: 'Cairo';
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #FFFFFF; /* Light grey background for better visibility */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and hamburger */
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Cairo';
+    font-weight: bold;
+    font-size: 25px;
+    position: relative; /* Allow positioning for logo and hamburger menu */
+}
+
+.logo-container{
+    margin-top: 15px;
+}
+
+.logo2{
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.logo-container img {
+    max-width: 100%; /* Ensures the logo doesn't exceed the container size */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+
+/* Navigation Styles */
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row; /* Horizontal by default */
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Hamburger Menu for Mobile */
+.nav-toggle {
+    display: none; /* Hide checkbox */
+}
+
+.nav-toggle-label {
+    display: none; /* Hide label by default */
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    transition: 0.3s ease;
+}
+
+.nav-toggle-label span::before {
+    content: '';
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    content: '';
+    top: 8px;
+}
+
+/* Adjust header for responsive mode */
+@media (max-width: 768px) {
+    header {
+        height: 60px; /* Adjust height to center the content better */
+        padding: 0 20px; /* Adjust padding for responsive layout */
+    }
+
+    .logo-container {
+        display: flex; /* Flexbox to align logos side by side */
+        align-items: center;
+        margin-right: 12rem;
+    }
+
+    .logo {
+        margin-right: 5px; /* Add some spacing between logos */
+    }
+
+    .logo-container img {
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .nav-toggle-label {
+        display: block; /* Show the hamburger icon */
+        position: absolute; /* Position hamburger menu on the right */
+        right: 2.5rem; /* Adjust for spacing from the right */
+        top: 80%; /* Center vertically relative to header */
+        transform: translateY(-50%); /* Vertically center the hamburger */
+        cursor: pointer;
+    }
+
+    nav {
+        position: absolute;
+        right: 20px;
+        top: 60px; /* Start right below the header */
+        width: auto;
+        display: none; /* Initially hide the menu */
+        flex-direction: column; /* Make the menu vertical */
+        align-items: flex-end;
+        background-color: #0056b3; /* Optional: background color for menu */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical layout for mobile */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav ul li {
+        text-align: right; /* Align text to the right */
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        display: block; /* Make links fill the li */
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + nav {
+        display: flex; /* Display nav when toggle is checked */
+    }
+}
+
+
+/* Hero Section */
+#hero-contact {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    min-height: 85vh;
+    background-image: url('boiler2.png'), url('bluecontact.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center top, center bottom;
+    background-size: cover, cover, cover;
+    background-attachment: fixed; /* This creates the parallax effect */
+}
+
+.hero-content {
+    /* padding: 20px; */
+    color: #fff; /* White text color */
+    text-align: center;
+    max-width: 500px; /* Maximum width to control text length */
+    margin: 100px auto 0; /* Reduce the top margin to move the content up */
+    position: relative; /* Position relative for absolute centering */
+    top: 50%; /* Push content halfway down */
+    /* transform: translateY(-90%); Center content vertically */
+}
+
+
+.hero-content h1 {
+    margin-bottom: 20px; /* Space between the title and the description */
+}
+
+.hero-content p {
+    margin: 10px 0; /* Space between paragraphs */
+}
 
 /* Contact Form Section */
 #contact-form-info {
     display: flex;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 30px 15px; /* Reduced padding for smaller screens */
     background: #f8f8f8;
+    flex-direction: column; /* Stack columns vertically by default */
 }
 
 #contact-form-info .container {
     display: flex;
+    flex-direction: column; /* Stack columns vertically by default */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     justify-content: space-between;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly darker shadow for depth */
+    border-radius: 12px; /* Rounded corners for a softer look */
     overflow: hidden;
 }
 
 #contact-form-info .form-column,
 #contact-form-info .info-column {
     flex: 1;
-    padding: 30px;
+    padding: 20px; /* Reduced padding for smaller screens */
+    width: 100%; /* Full width by default */
 }
 
 #contact-form-info .info-column {
-    background: #00729a;
+    background: #312c98;
     color: #fff;
+    text-align: center; /* Center align text content */
+}
+
+#contact-form-info .info-column h2,
+#contact-form-info .info-column .address,
+#contact-form-info .info-column .contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    justify-content: center;
+}
+
+#contact-form-info .info-column .contact-methods {
+    margin-top: 20px;
 }
 
 #contact-form-info h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center; /* Center align headings */
 }
 
 #contact-form-info form {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Adds space between form elements */
+    width: 100%; /* Ensure the form takes the full width */
+    max-width: 100%; /* Remove any width restrictions */
 }
 
 #contact-form-info label {
@@ -47,23 +271,34 @@
 
 #contact-form-info input,
 #contact-form-info textarea {
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+    border-radius: 6px;
+    width: calc(100% - 24px); /* Full width with padding taken into account */
     box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+#contact-form-info input:focus,
+#contact-form-info textarea:focus {
+    border-color: #00ac9d; /* Change border color on focus for better UX */
+    outline: none; /* Remove default outline */
 }
 
 #contact-form-info button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px; /* Reduced padding for a smaller button */
+    font-size: 14px; /* Smaller font size */
     color: #fff;
-    background-color: #00729a;
+    background-color: #00ac9d;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px; /* Slightly smaller border radius */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    width: fit-content; /* Adjust button width to fit its content */
+    align-self: center; /* Center align the button */
+    margin-top: 10px; /* Add some margin on top for spacing */
 }
 
 #contact-form-info button:hover {
@@ -74,20 +309,13 @@
     margin-bottom: 20px;
 }
 
-#contact-form-info .contact-methods {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
 #contact-form-info .contact-methods a {
     display: flex;
     align-items: center;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #contact-form-info .contact-methods img {
@@ -110,4 +338,153 @@
 #contact-form-info .social-icons img {
     width: 24px;
     height: 24px;
+}
+
+/* Responsive Styles for Larger Screens */
+@media (min-width: 768px) {
+    #contact-form-info {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+        padding: 50px 20px;
+    }
+
+    #contact-form-info .container {
+        flex-direction: row; /* Arrange columns side-by-side */
+        align-items: stretch; /* Align items to stretch full height */
+    }
+
+    #contact-form-info .form-column,
+    #contact-form-info .info-column {
+        width: 50%; /* Equal width for both columns on larger screens */
+        padding: 30px;
+    }
+
+    #contact-form-info .info-column {
+        background: #312c98;
+        color: #fff;
+        text-align: left; /* Align text to the left on larger screens */
+    }
+
+    #contact-form-info .form-column {
+        border-right: 1px solid #f0f0f0; /* Optional: Add a separator line */
+    }
+}
+
+@media (min-width: 1024px) {
+    #contact-form-info {
+        padding: 70px 40px; /* Extra padding on larger screens */
+    }
+
+    #contact-form-info .container {
+        max-width: 1200px;
+    }
+}
+
+
+
+/* Footer Styles */
+#site-footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 5px 0;
+}
+
+.logo-column {
+    flex: 0 1 auto; /* Allow the logo to maintain its size without stretching */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Left-align the content */
+}
+
+.contact-info div, .contact-methods {
+    text-align: left; /* Left-align text for the address and contact methods */
+}
+
+.contact-methods {
+    display: flex; /* Display both links in a single row */
+    justify-content: start; /* Align the items to the start */
+    gap: 20px; /* Space between call and email links */
+}
+
+.contact-methods a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.contact-methods img {
+    width: 24px; /* Smaller icon size */
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Responsive Styles for Footer */
+@media (max-width: 1024px) {
+    .footer-container, .footer-column {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container, .footer-column {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-column {
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
