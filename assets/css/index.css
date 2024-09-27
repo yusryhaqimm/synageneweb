@@ -179,7 +179,7 @@ nav ul li a {
     background-repeat: no-repeat, no-repeat;
     background-position: center, center top, center bottom;
     background-size: cover, cover, cover;
-    background-attachment: fixed; /* This creates the parallax effect */
+    /* background-attachment: fixed; This creates the parallax effect */
 }
 
 
