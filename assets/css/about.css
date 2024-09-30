@@ -1,6 +1,5 @@
 /* General Styles */
 body {
-    
     font-family: 'Cairo';
     margin: 0;
     padding: 0;
@@ -21,21 +20,17 @@ header {
     position: relative; /* Allow positioning for logo and hamburger menu */
 }
 
-.logo-container{
-    margin-top: 15px;
-}
-
-.logo2{
-    margin-bottom: 10px;
-    margin-left: 5px;
-    padding: 0;
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    margin: 0; /* Remove margin to prevent unwanted spacing */
 }
 
 .logo-container img {
-    max-width: 100%; /* Ensures the logo doesn't exceed the container size */
-    height: auto; /* Maintains the aspect ratio */
+    max-width: 250px; /* Set a consistent width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove unnecessary top margin */
 }
-
 
 /* Navigation Styles */
 nav {
@@ -46,10 +41,11 @@ nav {
 nav ul {
     list-style: none;
     padding: 0px;
-    margin: 0;
-    display: flex;
+    margin-right: 50px; /* Adjust the right margin for better alignment */
+    margin-top: 0; /* Align the navigation bar with the logo */
+    display: flex; /* Default: horizontal layout */
     justify-content: flex-end;
-    flex-direction: row; /* Horizontal by default */
+    align-items: center; /* Vertical center alignment */
 }
 
 nav ul li {
@@ -71,7 +67,7 @@ nav ul li a {
     display: none; /* Hide label by default */
     position: absolute;
     top: 22px;
-    right: 20px;
+    right: 20px; /* Position hamburger menu on the right */
     height: 30px;
     width: 30px;
     cursor: pointer;
@@ -101,58 +97,55 @@ nav ul li a {
 /* Adjust header for responsive mode */
 @media (max-width: 768px) {
     header {
-        height: 60px; /* Adjust height to center the content better */
-        padding: 0 20px; /* Adjust padding for responsive layout */
+        justify-content: space-between; /* Space between logo and hamburger */
+        padding: 10px 20px; /* Adjust padding for responsive layout */
     }
 
     .logo-container {
-        display: flex; /* Flexbox to align logos side by side */
-        align-items: center;
-        margin-right: 12rem;
-    }
-
-    .logo {
-        margin-right: 5px; /* Add some spacing between logos */
+        margin-right: auto; /* Push logo to the left */
     }
 
     .logo-container img {
+        max-width: 150px; /* Set a smaller width for mobile */
         height: auto; /* Maintain the aspect ratio */
     }
 
+    /* Position hamburger menu on the right */
     .nav-toggle-label {
         display: block; /* Show the hamburger icon */
-        position: absolute; /* Position hamburger menu on the right */
-        right: 2.5rem; /* Adjust for spacing from the right */
-        top: 80%; /* Center vertically relative to header */
+        position: absolute;
+        right: 30px; /* Position hamburger menu on the right */
+        top: 50%; /* Center vertically relative to header */
         transform: translateY(-50%); /* Vertically center the hamburger */
         cursor: pointer;
     }
 
     nav {
         position: absolute;
-        right: 20px;
         top: 60px; /* Start right below the header */
+        right: 20px;
         width: auto;
         display: none; /* Initially hide the menu */
-        flex-direction: column; /* Make the menu vertical */
-        align-items: flex-end;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
         background-color: #0056b3; /* Optional: background color for menu */
         padding: 10px;
         border-radius: 5px;
     }
 
     nav ul {
-        flex-direction: column; /* Vertical layout for mobile */
+        flex-direction: column; /* Make UL display vertically */
+        align-items: flex-start; /* Align items to the left */
         list-style: none;
         padding: 0;
         margin: 0;
-        align-items: flex-start; /* Align items to the start */
         z-index: 9;
     }
 
     nav ul li {
-        text-align: right; /* Align text to the right */
-        margin: 5px 0;
+        text-align: left; /* Align text to the left */
+        margin: 10px 0; /* Add margin between items */
+        width: 100%; /* Full width for list items */
     }
 
     nav ul li a {
@@ -162,11 +155,11 @@ nav ul li a {
         text-decoration: none;
     }
 
+    /* Show the navigation menu when checkbox is checked */
     .nav-toggle:checked + .nav-toggle-label + nav {
         display: flex; /* Display nav when toggle is checked */
     }
 }
-
 
 /* Hero Section */
 #hero-about {
@@ -500,6 +493,11 @@ nav ul li a {
     width: 24px; /* Smaller icon size */
     height: 24px;
     margin-right: 10px;
+}
+
+.contact-methods img[alt="Email Us"] {
+    width: 45px; /* Larger icon size for mail */
+    height: 35px;
 }
 
 /* Responsive Styles for Footer */
